@@ -1,0 +1,115 @@
+.events-list{
+	width: auto;
+	list-style: none;
+	padding: 0;
+}
+/*.events-list li{
+	padding-bottom: 1em;
+	border-bottom: solid thin;
+	margin-bottom: 1em;
+}
+ */
+#cal-month {
+	color: Black;
+	background-color: DarkOrange;
+	font: italic bold 25px Georgia, serif;
+	text-align: center;
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+	border: solid thin Black;
+	margin-bottom: 1em;
+}
+#cal-day {
+	color: #00cf00;
+	background-color: DarkBlue;
+	font: 1.2em arial, sans-serif;
+	font-weight: bold;
+	text-align: left;
+	border: solid thin Black;
+	padding-left: 30px;
+	margin-top: 1em;
+	padding: 10px;
+}
+#cal-title {
+	color: Red;
+	background-color: White;
+	font: 1.3em arial, sans-serif;
+	font-weight: bold;
+	text-align: left;
+	padding: 15px;
+	border: solid thin Black;
+}
+#tblEvent > tbody > tr > td:nth-child(1) {
+	padding-right: 10px;
+	vertical-align: top;
+}
+#cal-titleAd {
+	background-color: gray;
+	color: white;
+	padding: 2px 15px;
+	border: solid thin Black;
+}
+
+#cal-titleAd tr > td {
+	font: 1.05em arial, sans-serif;
+	font-weight: bold;
+	text-align: left;
+}
+#cal-titleAd tr > td + td {
+	font: 1em arial, sans-serif;
+	font-weight: normal;
+	text-align: right;
+}
+#tblEventAd {
+	width: 100%;
+}
+#tblEvent {
+	width: 100%;
+}
+#tblEvent > tbody > tr > td:nth-child(1) {
+	width: 18%;
+}
+#cal-info {
+	color: Black;
+	background-color: White;
+	font: .9em arial, sans-serif;
+	font-weight: normal;
+	text-align: left;
+	padding: 15px 0px 0px 0px;
+}
+.event-description img {
+	width: 100%;
+	height: auto;
+}
+#cal-info > div > table {
+	width: 100%;
+}
+#cal-info td {
+	vertical-align: top;
+	padding: 3px;
+}
+#cal-info > div > table {
+	width: auto;
+}
+#cal-info > div > table > tbody > tr > td:nth-child(1){
+	width: 50%;
+}
+#calDay {
+	width: 100%;
+}
+#tblEventAd > tbody > tr > td:nth-child(2) {
+	text-align: right;
+}
+@media 
+only screen and (max-width: 500px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	#cal-info > div > table td { 
+		display: block; 
+	}
+	#cal-info > div > table > tbody > tr > td:nth-child(1) {
+		width: 100%;
+	}
+}
+
