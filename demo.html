@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>eventList.js</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/autolinker/0.26.0/Autolinker.js"></script>
+		<script src="js/event-list.jquery.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+		<style>
+			body{
+				padding:1em;
+			}
+			pre{
+				padding:1em;
+				background-color: #1B2662;
+				color:#E1F920;
+			}
+			.events-list{
+				list-style: none;
+				padding: 0;
+			}
+			.events-list li{
+				padding-bottom: 1em;
+				border-bottom: solid thin;
+				margin-bottom: 1em;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1>eventList.js Demo</h1>
+		<p>eventList.js is a super-simple to use jQuery function for displaying a list of forthcoming events on your page.</p>
+		<h2>Easy peasy</h2>
+		<p>Getting eventList.js up and running is really easy.</p>
+		<ul>
+			<li>
+				<a href="https://support.google.com/calendar/answer/63962?hl=en">Find your calendar ID in the calendar settings page.</a> The calendar <strong>must</strong> be publicly available.
+			</li>
+			<li><a href="https://console.developers.google.com/flows/enableapi?apiid=calendar">Generate a Google Calender API key</a></li>
+			<li>Include the script in your head (you&rsquo;ll need jQuery too obvs).</li>
+			<li>Extend the target object <code>.eventList();</code>, passing in
+				<a href="https://support.google.com/calendar/answer/63962?hl=en">the ID for a publicly available Google calendar</a> you would like to display.</li>
+			</ul>
+<pre>
+&lt;div id="target-div"/&gt;
+&lt;script&gt;
+	$(document).ready(function(){
+
+		args = {
+			key: 'AIzaSyDztnX7ekIgOleB0dNy-4RbteuKzpFRe1Q',
+			calID: 'mcgnoj82l9h7vlmtb7gg5146pc@group.calendar.google.com',
+			maxResults: 12
+		}
+
+		$('#target-div').eventList(args);
+	});
+&lt;/script&gt;
+</pre>
+			<h2>Give it a whirl!</h2>
+			<p>Paste your calendar ID into the input below.</p>
+			<p>
+			<button id="test-cal" value="startupdigest.com_9ij8urq2vv011iqfopm652eeqo@group.calendar.google.com">If you haven't got one (or the energy to go get it) try this one</button>
+			</p>
+
+			<label for="testID">GCal ID</label>
+			<input id="testID" type="text" placeholder="Paste your Google calendar ID in here">
+
+			<div id="test-list"></div>
+			<script>
+
+				$(document).ready(function(){
+
+					function updateCal(ID){
+						args = {
+							calID: ID,
+    					key: 'AIzaSyBvhAR22OCPdXf46brVynlPXp2V40sneDo'
+						}
+						$('#test-list').eventList(args);
+					}
+
+					$('#test-cal').click(function(){
+						tester = $(this).val();
+						$('#testID').val(tester);
+						updateCal(tester);
+					});
+
+					$('#testID').on("change keyup paste", function(){
+						testID = $(this).val();
+						updateCal(testID);
+					});
+				});
+			</script>
+		</body>
+	</html>
