@@ -1,3 +1,12 @@
+This module displays events from Goggle Calandar with artwork stored on Google Drive.
+The description of the event is displayed next to the artwork with the background created from the artwork.
+
+Keys to The Google API are required and the Google Calendar must be public.
+No access to private calendars is provided.
+
+
+Use of eventList (below) is noted.
+
 eventList is a super-simple to use jQuery function for displaying a list of forthcoming events on your page.
 
 ## Features
