@@ -229,7 +229,7 @@ $.fn.eventList = function(args, date, days){
     }
     else{
 		if(item.attachments) {
-			var sPoster = 'ximages/' + item.attachments["0"].title;
+			var sPoster = 'images/' + item.attachments["0"].title;
 
 	        sOut = sOut + 
 
