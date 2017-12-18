@@ -1,0 +1,93 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 17px;
+  color: #615E5E;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.logo-row {
+  margin-top: 30px;
+}
+
+.search-row {
+  margin-top: 20px;
+}
+
+hr {
+  border-top: 1px solid #E2DFDF;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+  color: #444;
+  text-align: center;
+  font-size: 2em;
+}
+
+h4 {
+   margin-top: 1.9em;  
+   margin-bottom: 1.9em;  
+}
+form {
+  text-align: center;
+}
+
+#input-search {
+  color: chartreuse;
+  background-color: DarkBlue;
+  width: 90%;
+  height: 0.8em;
+  margin:0 auto;
+  padding: 16px 7px;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align:center;
+}
+
+.results-row {
+  margin-top: 30px;
+}
+
+#results {
+  padding: 0px 30px;
+}
+
+#results img {
+  width: 100%;
+}
+
+#results h3 {
+  font-size: 1.2em;
+  color: #444;
+  -webkit-margin-before: .2em;
+  -webkit-margin-after: .2em;
+}
+#results p {
+  -webkit-margin-before: .2em;
+  -webkit-margin-after: .2em;
+}
+
+.channel-meta {
+  font-size: 15px;
+}
+
+.channel-meta i {
+  color:#444;
+}
+
+#buttons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#prev-button {
+  margin-right: 5px;
+}
+
+.fa-heart {
+  color: red;
+}
